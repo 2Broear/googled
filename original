@@ -2,108 +2,381 @@
 <html>
   <head>
     <title>Google - d</title>
-    <link rel="icon" type="image/ico" href="//googled.top/images/gavatar.png">
+    <link rel="icon" type="image/ico" href="images/gavatar.png">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Googled">
     <meta name="keywords" content="Googled Search,Google Search">
-    <link type="text/css" rel="stylesheet" href="//googled.top/style/animate.min.css">
+    <link type="text/css" rel="stylesheet" href="style/animate.min.css"></head>
     <style>
-        html,body {width:100%;height:100%;margin:0;padding:0;overflow:hidden;color:#222;background:#fff;font-family:arial,sans-serif;}
-        a:hover {text-decoration:underline;}
-        a {text-decoration:none;}
-        ul,ol {margin:0;padding:0;list-style-type:none;}
-        form {width:100%;display:inline;}
-        form input#input {width:inherit;height:100%;background-color:transparent;border:none;margin:0;padding:0 42px;color:rgba(0,0,0,.87);word-wrap:break-word;outline:none;-webkit-tap-highlight-color:transparent;font-size:16px;box-sizing:border-box;}
-        .l {display:inline-block;}
-        .l img {padding-top:109px;}
-        .l .img {position:relative;display:inline;}
-        .l .img::after {content:'';width:28px;height:13px;position:absolute;top:0;right:0;background:url(images/.top.png) no-repeat;}
-        .gh {width:588px;outline:0;position:relative;z-index:1;}
-        .gh .h.his:empty + .g {border-radius:24px;}
-        .gh.tipshow .h.his:empty + .g {border-bottom-left-radius:0;border-bottom-right-radius:0;}
-        .gh.focus .h.his,.gh.btnFoc .h.his {display:block;}
-        .gh.tipshow > .h.his {display:none;}
-        .gh.tipshow > .h.tips {display:block;}
-        .gh.focus > .g,.gh.tipshow > .g,.gh.btnFoc > .g {border-bottom-left-radius:0;border-bottom-right-radius:0;box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);border-color:rgba(223,225,229,0);}
-        .g:hover {box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);border-color:rgba(223,225,229,0);}
-        .g {width:100%;background:#fff;border:1px solid #dfe1e5;box-shadow:none;border-radius:24px;z-index:3;height:44px;margin:23px auto auto;position:relative;}
-        .h:empty {z-index:-999;}
-        .tips {display:none;}
-        .show {display:block!important;}
-        .hide {display:none!important;}
-        .h {width:590px;height:100%;color:#52188c;font-size:16px;display:none;position:absolute;bottom:-100%;}
-        .h ul {background:#fff;list-style-type:none;margin:0;box-shadow:0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);border:0;border-radius:0 0 24px 24px;box-shadow:0 4px 6px 0 rgba(32,33,36,0.28);overflow:hidden;position:relative;z-index:9;}
-        .h ul li:hover,.h ul li.selected {background:#eee;}
-        .h ul li {position:relative;}
-        .h ul li:first-child {margin-top:5px;}
-        .h ul li:last-child {margin-bottom:15px;}
-        .h ul div.list {display:flex;align-items:center;padding:0 20px 0 14px;}
-        .h ul div.list .text {flex:auto;text-align:left;cursor:default;padding:5px 0;}
-        .h ul div.list i.icon.s {padding:0;background-position:0 0;}
-        .h ul div.list i.icon {background:url(images/desktop_searchbox_sprites302_hr.webp) no-repeat 0 -21px;background-size:20px;margin-right:12px;height:20px;width:20px;min-width:20px;}
-        .h ul div.list .del:hover {color:#1a73e8;text-decoration:underline;}
-        .h ul div.list .del {cursor:pointer;color:#80868b;font:13px arial,sans-serif;}
-        .se,.mc {width:20px;height:100%;margin:0 15px;position:absolute;top:0;}
-        .se {color:#9AA0A6;left:0}
-        .mc {padding:0 5px;right:0}
-        .mc svg,.se svg {width:100%;height:100%;fill:currentColor;}
-        .mc svg {width:24px}
-        #btns,#btns_ {padding-top:12px;}
-        #btns button,#btns_ button {margin:11px 6px;}
-        .btn {padding-top:18px;}
-        .btn input[type="submit"]:focus,button:focus {border:1px solid #4d90fe;outline:none}
-        .btn input[type="submit"]:hover,button:hover {box-shadow:0 1px 1px rgba(0,0,0,0.1);background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);background-color:#f8f8f8;border:1px solid #c6c6c6;color:#222;}
-        .btn input[type="submit"],button {background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-color:#f2f2f2;border:1px solid #f2f2f2;border-radius:4px;color:#5F6368;font-size:14px;margin:11px 4px;padding:0 16px;height:36px;line-height:36px;max-height:36px;cursor:pointer;user-select:none;white-space:nowrap;overflow:hidden;}
-        .badwds {transition:transform .55s ease;}
-        .badwds.active span {display:block;}
-        .badwds span:first-child {display:block;}
-        .badwds span {width:inherit;display:none;}
-        .offer {margin:12px auto;line-height:29px;font-size:small;}
-        .hbar,.fbar {position:absolute;width:100%;left:0;white-space:nowrap;}
-        .hbar {top:0;font-size:13px;}
-        .fbar {bottom:0;background:#f2f2f2;font-size:14px;border-top:1px solid #e4e4e4}
-        .hbar ul,ol,.fbar ul,ol {width:50%;display:inline-block;box-sizing:border-box;}
-        .hbar ul,ol {padding:0 10px;}
-        .hbar ul,.fbar ul {text-align:left;}
-        .hbar ol,.fbar ol {text-align:right;}
-        .hbar ul li {padding-left:15px;}
-        .hbar ol li {padding-right:15px;}
-        .fbar ul li {padding-left:27px;}
-        .fbar ol li {padding-right:27px;}
-        .hbar li,.fbar li {display:inline-block;vertical-align:middle;}
-        .hbar li {line-height:62px;}
-        .fbar li {line-height:40px;}
-        .hbar a,.fbar a {color:#5f6368}
-        .hbar a#apps:hover {opacity:1;}
-        .hbar a#apps,.hbar a#avatar {width:30px;height:30px;display:block;}
-        .hbar a#apps {background:url(images/google.png) no-repeat -132px -38px /528px 68px;opacity:.55;}
-        .hbar a#avatar {background:url(images/gavatar.png);border-radius:50%;}
-        @media only screen and (max-width:600px) {.l img {max-width:72%;padding-top:58px}
-        .fbar,.btn,.s svg,.hbar ul {display:none;}
-        .hbar ol {width:100%;text-align:right;}
-        .gh {width:300px;}
-        .h {width:302px;}
-        button {border-radius:50px;}
-        #btns,#btns_ {padding-bottom:12px;}
-        }
+    html,body {
+      width:100%;
+      height:100%;
+      margin:0;
+      padding:0;
+      overflow:hidden;
+      color:#222;
+      background:#fff;
+      font-family:arial,sans-serif;
+    }
+    a:hover {
+      text-decoration:underline;
+    }
+    a {
+      text-decoration:none;
+    }
+    ul,ol {
+      margin:0;
+      padding:0;
+      list-style-type:none;
+    }
+    form {
+      width:100%;
+      display:inline;
+    }
+    form input#input {
+      width:inherit;
+      height:100%;
+      background-color:transparent;
+      border:none;
+      margin:0;
+      padding:0 42px;
+      color:rgba(0,0,0,.87);
+      word-wrap:break-word;
+      outline:none;
+      -webkit-tap-highlight-color:transparent;
+      font-size:16px;
+      box-sizing:border-box;
+    }
+    .l {
+      display:inline-block;
+    }
+    .l img {
+      padding-top:109px;
+    }
+    .l .img {
+      position:relative;
+      display:inline;
+    }
+    .l .img::after {
+      content:'';
+      width:28px;
+      height:13px;
+      position:absolute;
+      top:0;
+      right:0;
+      background:url(images/.top.png) no-repeat;
+    }
+    .gh {
+      width:588px;
+      outline:0;
+      position:relative;
+      z-index:1;
+    }
+    .gh .h.his:empty + .g {
+      border-radius:24px;
+    }
+    .gh.tipshow .h.his:empty + .g {
+      border-bottom-left-radius:0;
+      border-bottom-right-radius:0;
+    }
+    .gh.focus .h.his,.gh.btnFoc .h.his {
+      display:block;
+    }
+    .gh.tipshow > .h.his {
+      display:none;
+    }
+    .gh.tipshow > .h.tips {
+      display:block;
+    }
+    .gh.focus > .g,.gh.tipshow > .g,.gh.btnFoc > .g {
+      border-bottom-left-radius:0;
+      border-bottom-right-radius:0;
+      box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);
+      border-color:rgba(223,225,229,0);
+    }
+    .g:hover {
+      box-shadow:0 1px 6px 0 rgba(32,33,36,0.28);
+      border-color:rgba(223,225,229,0);
+    }
+    .g {
+      width:100%;
+      background:#fff;
+      border:1px solid #dfe1e5;
+      box-shadow:none;
+      border-radius:24px;
+      z-index:3;
+      height:44px;
+      margin:23px auto auto;
+      position:relative;
+    }
+    .h:empty {
+      z-index:-999;
+    }
+    .tips {
+      display:none;
+    }
+    .show {
+      display:block!important;
+    }
+    .hide {
+      display:none!important;
+    }
+    .h {
+      width:590px;
+      height:100%;
+      color:#52188c;
+      font-size:16px;
+      display:none;
+      position:absolute;
+      bottom:-100%;
+    }
+    .h ul {
+      background:#fff;
+      list-style-type:none;
+      margin:0;
+      box-shadow:0 3px 8px 0 rgba(0,0,0,0.2),0 0 0 1px rgba(0,0,0,0.08);
+      border:0;
+      border-radius:0 0 24px 24px;
+      box-shadow:0 4px 6px 0 rgba(32,33,36,0.28);
+      overflow:hidden;
+      position:relative;
+      z-index:9;
+    }
+    .h ul li:hover,.h ul li.selected {
+      background:#eee;
+    }
+    .h ul li {
+      position:relative;
+    }
+    .h ul li:first-child {
+      margin-top:5px;
+    }
+    .h ul li:last-child {
+      margin-bottom:15px;
+    }
+    .h ul div.list {
+      display:flex;
+      align-items:center;
+      padding:0 20px 0 14px;
+    }
+    .h ul div.list .text {
+      flex:auto;
+      text-align:left;
+      cursor:default;
+      padding:5px 0;
+    }
+    .h ul div.list i.icon.s {
+      padding:0;
+      background-position:0 0;
+    }
+    .h ul div.list i.icon {
+      background:url(images/desktop_searchbox_sprites302_hr.webp) no-repeat 0 -21px;
+      background-size:20px;
+      margin-right:12px;
+      height:20px;
+      width:20px;
+      min-width:20px;
+    }
+    .h ul div.list .del:hover {
+      color:#1a73e8;
+      text-decoration:underline;
+    }
+    .h ul div.list .del {
+      cursor:pointer;
+      color:#80868b;
+      font:13px arial,sans-serif;
+    }
+    .se,.mc {
+      width:20px;
+      height:100%;
+      margin:0 15px;
+      position:absolute;
+      top:0;
+    }
+    .se {
+      color:#9AA0A6;
+      left:0
+    }
+    .mc {
+      padding:0 5px;
+      right:0
+    }
+    .mc svg,.se svg {
+      width:100%;
+      height:100%;
+      fill:currentColor;
+    }
+    .mc svg {
+      width:24px
+    }
+    #btns,#btns_ {
+      padding-top:12px;
+    }
+    #btns button,#btns_ button {
+      margin:11px 6px;
+    }
+    .btn {
+      padding-top:18px;
+    }
+    .btn input[type="submit"]:focus,button:focus {
+      border:1px solid #4d90fe;
+      outline:none
+    }
+    .btn input[type="submit"]:hover,button:hover {
+      box-shadow:0 1px 1px rgba(0,0,0,0.1);
+      background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+      background-color:#f8f8f8;
+      border:1px solid #c6c6c6;
+      color:#222;
+    }
+    .btn input[type="submit"],button {
+      background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
+      background-color:#f2f2f2;
+      border:1px solid #f2f2f2;
+      border-radius:4px;
+      color:#5F6368;
+      font-size:14px;
+      margin:11px 4px;
+      padding:0 16px;
+      height:36px;
+      line-height:36px;
+      max-height:36px;
+      cursor:pointer;
+      user-select:none;
+      white-space:nowrap;
+      overflow:hidden;
+    }
+    .badwds {
+      transition:transform .55s ease;
+    }
+    .badwds.active span {
+      display:block;
+    }
+    .badwds span:first-child {
+      display:block;
+    }
+    .badwds span {
+      width:inherit;
+      display:none;
+    }
+    .offer {
+      margin:12px auto;
+      line-height:29px;
+      font-size:small;
+    }
+    .hbar,.fbar {
+      position:absolute;
+      width:100%;
+      left:0;
+      white-space:nowrap;
+    }
+    .hbar {
+      top:0;
+      font-size:13px;
+    }
+    .fbar {
+      bottom:0;
+      background:#f2f2f2;
+      font-size:14px;
+      border-top:1px solid #e4e4e4
+    }
+    .hbar ul,ol,.fbar ul,ol {
+      width:50%;
+      display:inline-block;
+      box-sizing:border-box;
+    }
+    .hbar ul,ol {
+      padding:0 10px;
+    }
+    .hbar ul,.fbar ul {
+      text-align:left;
+    }
+    .hbar ol,.fbar ol {
+      text-align:right;
+    }
+    .hbar ul li {
+      padding-left:15px;
+    }
+    .hbar ol li {
+      padding-right:15px;
+    }
+    .fbar ul li {
+      padding-left:27px;
+    }
+    .fbar ol li {
+      padding-right:27px;
+    }
+    .hbar li,.fbar li {
+      display:inline-block;
+      vertical-align:middle;
+    }
+    .hbar li {
+      line-height:62px;
+    }
+    .fbar li {
+      line-height:40px;
+    }
+    .hbar a,.fbar a {
+      color:#5f6368
+    }
+    .hbar a#apps:hover {
+      opacity:1;
+    }
+    .hbar a#apps,.hbar a#avatar {
+      width:30px;
+      height:30px;
+      display:block;
+    }
+    .hbar a#apps {
+      background:url(images/google.png) no-repeat -132px -38px /528px 68px;
+      opacity:.55;
+    }
+    .hbar a#avatar {
+      background:url(images/gavatar.png);
+      border-radius:50%;
+    }
+    @media only screen and (max-width:600px) {
+      .l img {
+      max-width:72%;
+      padding-top:58px
+    }
+    .fbar,.btn,.s svg,.hbar ul {
+      display:none;
+    }
+    .hbar ol {
+      width:100%;
+      text-align:right;
+    }
+    .gh {
+      width:300px;
+    }
+    .h {
+      width:302px;
+    }
+    button {
+      border-radius:50px;
+    }
+    #btns,#btns_ {
+      padding-bottom:12px;
+    }
+    }
     </style>
-  </head>
   <body>
     <div class="hbar">
       <ul>
         <li>
-          <a href="//blog.2broear.com/about" target="_blank">About</a></li>
+          <a href="//mail.google.com">Gmail</a></li>
         <li>
-          <a href="javascript:;" target="_blank">Blog</a></li>
+          <a href="//www.google.com/imghp">Images</a></li>
       </ul>
       <ol>
         <li>
-          <a href="javascript:;" target="_blank">News</a></li>
+          <a href="//blog.2broear.com/news" target="_blank">News</a></li>
         <li>
-          <a href="javascript:;" target="_blank">Downloads</a></li>
+          <a href="//blog.2broear.com/download" target="_blank">Downloads</a></li>
         <li>
-          <a href="javascript:;" id="apps" target="_blank"></a>
+          <a href="//blog.2broear.com/acg" id="apps" target="_blank"></a>
         </li>
         <li>
           <a href="javascript:;" id="avatar"></a>
@@ -155,13 +428,14 @@
     </center>
     <div class="fbar">
       <ul>
+        <!--<li><a href="//steam.2broear.com/"target="_blank">Steam</a></li>-->
         <li>
-          <a href="javascript:;" target="_blank">Steam</a></li>
+          <a href="//github.com/2Broear/googled/" target="_blank">Github</a></li>
         <li>
-          <a href="javascript:;" target="_blank">Music</a></li>
+          <a href="//blog.2broear.com/about" target="_blank">About</a></li>
         <li>
-          <a href="javascript:;" target="_blank">Mikutap</a></li>
-      </ul>
+          <a href="//blog.2broear.com" target="_blank">Blog</a></li>
+        <!--<li><a href="//app.2broear.com/music/"target="_blank">Music</a></li><li><a href="//app.2broear.com/mikutap/"target="_blank">Mikutap</a></li><li><a href="javascript:;"onclick="clearHis()">Clear Each Hist</a></li>--></ul>
       <ol>
         <li>
           <a href="//oeasy.org/" target="_blank">Oeasy</a></li>
@@ -171,8 +445,7 @@
           <a href="//developer.mozilla.org/" target="_blank">MDN</a></li>
       </ol>
     </div>
-    <script>
-      var ls = window.localStorage,
+    <script>var ls = window.localStorage,
       badwords = ["Baidu MyASS", "Bullshit liar", "Piss Off", "Dick Head", "Crap Asshole", "Fucking Bastard", "Bugger Off", "Bloody Hell", "Dis Wanker", "Jerk Off"],
       his = {},
       engine = {
@@ -307,8 +580,18 @@
       function Rec() {
         let rt = input.value;
         rt != '' ? ls.setItem('Rec', rt) : false;
-        let rec = ls.getItem('Rec');
-        rec != null && rec != undefined ? (ls.setItem('hisRec' + rec, rec), console.log(rec)) : console.log('empty');
+        let rec = ls.getItem('Rec'),
+        recs = 'hisRec' + rec,
+        rech = his[recs];
+        if (rec != null && rec != undefined) {
+          ls.setItem('hisRec' + rec, rec);
+          if (rt == rech) {
+            console.log("repeat search: " + rech);
+            delete his[recs];
+            Object.assign(his, { [recs] : rech
+            })
+          }
+        }
         for (var i = 0; i < ls.length; i++) {
           var key = ls.key(i),
           val = ls.getItem(key);
@@ -391,6 +674,6 @@
           break
         }
       }
-    </script>
+      </script>
   </body>
 </html>
